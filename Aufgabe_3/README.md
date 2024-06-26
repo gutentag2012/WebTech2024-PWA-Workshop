@@ -1,21 +1,20 @@
-# Aufgabe 3 - Einfacher Service Worker
+# Aufgabe 3 - Eigener Install-Button (Nur Android/Desktop Chrome, sorry 🙄)
 
-Service Worker sind der Schlüssel zu coolen PWAs die sehr nah an native Apps herankommen.
-Mit ihnen werden Features wie Offline-Verfügbarkeit, Push-Benachrichtigungen und Hintergrund-Sync möglich.
+In Chromium basierten Browsern kann das `beforeinstallprompt` Event genutzt werden, um eine eigene Installations-UI zu erstellen.
+Darauf kann man in JS reagieren und selbst entscheiden, wann und wie die Installation angeboten wird.
 
-Doch erstmal wollen wir einen einfachen Service Worker registrieren und installieren.
+> Safari und Firefox unterstützen das `beforeinstallprompt` Event nicht.
+> Und da alle Browser unter iOS auf Safari basieren, ist das Ganze auf iPhones nicht möglich.
 
 ## Aufgabenstellung
 
-1. Erstellt eine Datei `serviceWorker.js` im `docs` Ordner.
-2. Implementiert einen einfachen Service Worker, der beim _Laden_, der _Installieren_ und _Aktivieren_ eine Nachricht in der Konsole ausgibt.
-3. Erstellt eine `registerServiceWorker.js` Datei im `docs` Ordner und bindet sie in eurer `index.html` Datei ein.
-4. Hier implementiert ihr dann die Registrierung des Service Workers aus der `serviceWorker.js` Datei.
-5. Pusht das Ganze und wartet auf den Deploy.
-6. Öffnet Seite auf eurem Desktop und schaut euch die Konsole! Ihr solltet die Nachrichten sehen, die der Service Worker ausgibt.
-
-> **Hinweis:** Falls ihr die Seite schon mal besucht habt, müsst ihr den Service Worker manuell über den "Application" Tab löschen, damit er neu installiert wird und ihr die Logs seht.
+1. Kopiert `FAB.css´ in euren `docs` Ordner.
+2. Kopiert den Inhalt von `FAB.html` ans Ende eurer `index.html` Datei und bindet `FAB.css` im head als Stylesheet ein.
+3. Kopiert die `FAB.js` in euren `docs` Ordner und bindet sie im head als Script ein.
+4. Implementiert einen Event listener, der auf das `beforeinstallprompt` Event reagiert und einen Button einblendet (`showInstallButton(event)`) der die Installation anbietet.
 
 ## Ziel
 
-Nach dieser Aufgabe registriert, installiert und aktiviert eure App einen Service Worker!
+Nach dieser Aufgabe kann die App den Nutzer im eigenen UI auffordern die App zu installieren.
+
+> **Hinweis:** Die Installation über die Browser UI aus Aufgabe 2 ist natürlich weiterhin möglich.

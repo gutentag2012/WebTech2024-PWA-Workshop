@@ -1,18 +1,23 @@
-# Aufgabe 4 - Offline!
+# Aufgabe 4 - Einfacher Service Worker
 
-Mit einem Service Worker könnt ihr eure App offlinefähig machen. 
-Ihr könnt ihn nutzen, um bestimmte oder alle Ressourcen zu cachen.
+Service Worker sind der Schlüssel zu coolen PWAs die sehr nah an native Apps herankommen.
+Mit ihnen werden Features wie Offline-Verfügbarkeit, Push-Benachrichtigungen und Hintergrund-Sync möglich.
 
-Hier cachen wir die "Shell" der App, also die Dateien, die benötigt werden, um die App zu starten.
-Extradateien wie .js aus den vorherigen Schritten oder Bilder können auch gecacht werden, wir lassen das hier aber aus.
+Doch erstmal wollen wir einen einfachen Service Worker registrieren und installieren.
 
 ## Aufgabenstellung
 
-1. Erweitert euren Service Worker so, dass die `index.html` und `style.css` Dateien gecacht werden.
-2. Nach dem Deployen sollte eure App auch im Flugmodus geöffnet werden können!
+1. Erstellt eine Datei `serviceWorker.js` im `docs` Ordner.
+2. Implementiert einen einfachen Service Worker, der beim _Laden_, der _Installieren_ und _Aktivieren_ eine Nachricht in der Konsole ausgibt.
+3. Erstellt eine `registerServiceWorker.js` Datei im `docs` Ordner und bindet sie in eurer `index.html` Datei ein.
+4. Hier implementiert ihr dann die Registrierung des Service Workers aus der `serviceWorker.js` Datei.
+5. Pusht das Ganze und wartet auf den Deploy.
+6. Öffnet Seite auf eurem Desktop und schaut euch die Konsole! Ihr solltet die Nachrichten sehen, die der Service Worker ausgibt.
 
-> **Tipp:** Nutzt dafür die vorgegebene `serviceWorker.js` Datei, diese beinhaltet bereits ein wenig Template Code, welcher euch in die richtige Richtung leitet.
+> **Hinweis:** Falls ihr die Seite schon mal besucht habt, müsst ihr den Service Worker manuell über den "Application" Tab löschen, damit er neu installiert wird und ihr die Logs seht.
+
+> **Hinweis:** Am Handy funktioniert das natürlich auch, um die Logs zu sehen, müsst ihr aber das remote inspecting verwenden.
 
 ## Ziel
 
-Nach dieser Aufgabe könnt ihr die App auch ohne Internetverbindung öffnen!
+Nach dieser Aufgabe registriert, installiert und aktiviert eure App einen Service Worker!

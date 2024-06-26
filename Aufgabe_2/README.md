@@ -1,4 +1,4 @@
-# Aufgabe 2
+# Aufgabe 2 - Web-App
 
 In dieser Aufgabe erstellt ihr ein Webmanifest welches eure Website für den Browser als App kennzeichnet.
 Noch sind wir aber noch nicht bei einer PWA, sondern erst bei einer Web-App.
