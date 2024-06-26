@@ -10,7 +10,7 @@ Mit dieser Aufgabe bereitet ihr eine Website vor, auf die später aufgebaut wird
 4. Stellt Pages so ein, der Ordner `docs` als Quelle für die Pages verwendet wird.
 
 ### GitHub Pages walkthrough
-> TBD
+![GitHub Pages Walkthrough](../assets/pages_walkthrough.png)
 
 ## Ziel
 
