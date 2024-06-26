@@ -5,9 +5,9 @@ Mit dieser Aufgabe bereitet ihr eine Website vor, auf die später aufgebaut wird
 ## Aufgabenstellung
 
 1. Forkt dieses Repository
-2. Kopiert den Inhalt des Ordners `Aufgabe_1` in den Ordner "Anwendung" und pusht das Ganze.
+2. Kopiert den Inhalt des Ordners `Aufgabe_1` in den Ordner `docs` und pusht das Ganze.
 3. Geht in die Einstellungen und aktiviert GitHub Pages
-4. Stellt Pages so ein, der Ordner "Anwendung" als Quelle für die Pages verwendet wird.
+4. Stellt Pages so ein, der Ordner `docs` als Quelle für die Pages verwendet wird.
 
 ### GitHub Pages walkthrough
 > TBD
