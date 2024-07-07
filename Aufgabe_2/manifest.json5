@@ -3,7 +3,6 @@
   "name": "Demo PWA",                 // Der volle Name der App
   "short_name": "PWA",                // Der Name der App auf dem Homescreen
   "start_url": "<hier die URL eurer GitHub Page eintragen>",    // Die Start-URL der App
-  "scope": "<hier die URL eurer GitHub Page eintragen>",         // Der URL Bereich der dieser App zugeordnet ist
   "theme_color": "#2c28f0",           // Die Farbe der Adressleiste (unter Android)
   "background_color": "#ffffff",      // Die Farbe des Hintergrunds vom Splashscreen (unter Android)
   "lang": "de-DE",                    // Die Sprache der App
