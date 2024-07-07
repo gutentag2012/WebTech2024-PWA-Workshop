@@ -10,6 +10,7 @@ Extradateien wie .js aus den vorherigen Schritten oder Bilder können auch gecac
 
 1. Erweitert euren Service Worker so, dass die `index.html` und `style.css` Dateien gecacht werden.
 2. Nach dem Deployen sollte eure App auch im Flugmodus geöffnet werden können!
+    - Tipp: Denkt daran, dass ein neuer Service Worker erst nach einem Reload der Seite aktiv wird. Ihr müsst also ggf. die Seite ein paar Mal neu laden bis alles klappt.
 
 > **Tipp:** Nutzt dafür die vorgegebene `serviceWorker.js` Datei, diese beinhaltet bereits ein wenig Template Code, welcher euch in die richtige Richtung leitet.
 

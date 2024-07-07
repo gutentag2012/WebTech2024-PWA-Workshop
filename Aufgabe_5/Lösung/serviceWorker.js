@@ -78,7 +78,7 @@ function tryToLoadFromNetwork (request, timeout = 10000) {
 function updateStaticCache (request, response) {
     caches.open(staticCache)
         .then(cache => {
-            cache.put(request, response)
+            return cache.put(request, response)
         })
 }
 
@@ -86,13 +86,17 @@ function updateStaticCache (request, response) {
 // Wenn das nicht funktioniert, wird versucht, die Datei aus dem Cache zu laden.
 self.addEventListener('fetch', event => {
     event.respondWith(
-        tryToLoadFromNetwork(event.request, 10000).catch(() => {
-            console.info('Fehler beim Laden aus dem Netzwerk, versuche aus dem Cache zu laden... 🗄️')
-            return caches.open(staticCache).then(cache => {
-                return cache.match(event.request, {ignoreSearch: true}).then(response => {
-                    return response || new Response(null, {status: 404, statusText: 'Not found'})
-                })
+        tryToLoadFromNetwork(event.request, 10000)
+            .catch(() => {
+                console.info('Fehler beim Laden aus dem Netzwerk, versuche aus dem Cache zu laden... 🗄️')
+
+                return caches.open(staticCache)
+                    .then(cache => {
+                        return cache.match(event.request, {ignoreSearch: true})
+                            .then(response => {
+                                return response || new Response(null, {status: 404, statusText: 'Not found'})
+                            })
+                    })
             })
-        })
     )
 })
