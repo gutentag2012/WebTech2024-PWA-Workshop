@@ -10,9 +10,18 @@
   "description": "This is a demo for the WebTech2024 PWA Workshop.",
   "screenshots": [
     {
-      "src": "screen_tall.png",
-      "sizes": "1080x1920",
-      "type": "image/png"
+      "src": "source/screen_tall.png",
+      "sizes": "1447x1835",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Wonder Widgets"
+    },
+    {
+      "src": "source/screen_tall.png",
+      "sizes": "1447x1835",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Wonder Widgets"
     }
   ],
   "icons": [
