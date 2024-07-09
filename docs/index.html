@@ -9,6 +9,14 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="FAB.css">    
     <script src="FAB.js"></script>
+
+    <script>
+        if("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("worker.js").catch(err => {
+                console.error("Service worker could not be registered!", err)
+            })
+        }
+    </script>
 </head>
 
 <body>
