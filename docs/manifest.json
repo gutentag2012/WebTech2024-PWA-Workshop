@@ -1,0 +1,24 @@
+{
+  "id": "com.gawenda.pwa-demo",     
+  "name": "Demo PWA",                 
+  "short_name": "PWA",                
+  "start_url": "https://gutentag2012.github.io/WebTech2024-PWA-Workshop/",
+  "theme_color": "#2c28f0",           
+  "background_color": "#ffffff",      
+  "orientation": "portrait",          
+  "display": "standalone",            
+  "icons": [
+    {
+      "purpose": "maskable",          
+      "sizes": "512x512",
+      "src": "icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",               
+      "sizes": "512x512",
+      "src": "icon512_rounded.png",
+      "type": "image/png"
+    }
+  ]
+}
