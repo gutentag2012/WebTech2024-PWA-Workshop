@@ -33,7 +33,6 @@ function showInstallButton(event) {
 
 // Start implementing here:
 window.addEventListener('beforeinstallprompt', (event) => {
-    console.log("Captured beforeinstallprompt event", event);
     event.preventDefault();
     showInstallButton(event);
 });
