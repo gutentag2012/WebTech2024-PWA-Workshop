@@ -12,9 +12,12 @@
 
     <script>
         if("serviceWorker" in navigator) {
+            console.log("Trying to register service worker...");
             navigator.serviceWorker.register("./worker.js").catch(err => {
                 console.error("Service worker could not be registered!", err)
             })
+        } else {
+            alert("Service Worker are not supported")
         }
     </script>
 </head>
