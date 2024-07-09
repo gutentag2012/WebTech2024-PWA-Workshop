@@ -44,9 +44,6 @@ function tryToLoadFromNetworkAndUpdateCacheIfSuccessful (request, timeout = 1000
         fetch(request).then(response => {
             clearTimeout(timeoutId)
 
-            // TODO: Überprüft ob die Datei, die geladen wurde, eine ist, die gecached werden soll und wenn ja, updated den Cache.
-            //       Hinweis: Nutzt einen Klon der Antwort (response.clone()), die Antwort ggf. Streams enthält die nur einmal genutzt werden können.
-
             const shouldBeCached = cachedPaths.includes(request.url)
             if (shouldBeCached) {
                 console.log("Updating cache for", request.url);
@@ -68,16 +65,14 @@ function tryToLoadFromNetworkAndUpdateCacheIfSuccessful (request, timeout = 1000
  * @param response
  */
 function updateStaticCache (request, response) {
+    console.log("Updating cache for", request.url)
     return caches.open(cacheName).then(cache => cache.put(request, response))
 }
 
 // Wenn eine Anfrage an das Netzwerk gestellt wird, wird zuerst versucht, die Datei aus dem Netzwerk zu laden.
 // Wenn das nicht funktioniert, wird versucht, die Datei aus dem Cache zu laden.
 self.addEventListener('fetch', event => {
-    // TODO: Versucht die Datei aus dem Netzwerk zu laden. Wenn das nicht funktioniert, versucht die Datei aus dem Cache zu laden.
-    //       Tipp: Nutzt event.respondWith() um die Antwort zu setzen.
-    //       Hinweis: Falls der Cache nicht gefunden wird, sollte eine 404 Antwort zurückgegeben werden (e.g. `new Response(null, {status: 404, statusText: 'Not found'})`).
-    //                Wenn dies nicht passiert, wirft der Browser einen Fehler und eure App lädt möglicherweise nicht korrekt.
+    console.log("Intercepting fetch for", event.request.url)
     event.respondWith(
         tryToLoadFromNetworkAndUpdateCacheIfSuccessful(event.request)
             .catch(() => caches.match(event.request, {ignoreSearch: true}))
