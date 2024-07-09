@@ -11,14 +11,14 @@
   "screenshots": [
     {
       "src": "screen_tall.png",
-      "sizes": "1447x1835",
+      "sizes": "815x1505",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Wonder Widgets"
     },
     {
-      "src": "screen_tall.png",
-      "sizes": "1447x1835",
+      "src": "screen_wide.png",
+      "sizes": "3790x1690",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Wonder Widgets"
