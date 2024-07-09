@@ -6,18 +6,20 @@
   "theme_color": "#2c28f0",           
   "background_color": "#ffffff",      
   "orientation": "portrait",          
-  "display": "standalone",            
+  "display": "standalone",  
+  "description": "This is a demo for the WebTech2024 PWA Workshop.",
+  "screenshots": [
+    {
+      "src": "screen_tall.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    }
+  ],
   "icons": [
     {
-      "purpose": "maskable",          
-      "sizes": "512x512",
-      "src": "icon512_maskable.png",
-      "type": "image/png"
-    },
-    {
       "purpose": "any",               
-      "sizes": "512x512",
-      "src": "icon512_rounded.png",
+      "sizes": "500x500",
+      "src": "icon.png",
       "type": "image/png"
     }
   ]
